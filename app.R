@@ -1,8 +1,7 @@
-library(shiny)
-library(ggplot2)
-library(bslib)
-library(gridlayout)
-
+library(shiny)      # v1.7.5
+library(ggplot2)    # v3.4.3
+library(bslib)      # v0.5.1
+library(gridlayout) # [github::rstudio/gridlayout] v0.2.1
 
 ui <- page_navbar(
   title = "Chick Weights Dashboard",
@@ -105,4 +104,3 @@ server <- function(input, output) {
 }
 
 shinyApp(ui, server)
-
