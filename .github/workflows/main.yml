@@ -1,0 +1,17 @@
+on:
+  push:
+    branches:
+      - cicd
+
+jobs:
+  my-jobs:
+    runs-on: ubuntu-latest
+    container:
+      image: rocker/r2u:22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.1
+      - name: list files
+        run: ls -lah
+      - name: 'zzz'
+        run: Rscript -e 'print("hello")'
