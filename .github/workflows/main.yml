@@ -5,7 +5,9 @@ on:
 
 jobs:
   my-jobs:
-    runs-on: rocker/r2u:22.04
+    runs-on: ubuntu-latest
+    container:
+      image: rocker/r2u:22.04
     steps:
       - name: Checkout
         uses: actions/checkout@v4.1.1
